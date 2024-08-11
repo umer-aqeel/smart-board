@@ -1,0 +1,93 @@
+// styles/page.module.scss
+
+$primary-color: #662d91;
+$background-color: #f8f9fa;
+$button-color: #662d91;
+$button-hover-color: darken($button-color, 10%);
+$input-background: #ffffff;
+$border-radius: 5px;
+
+.container {
+  position: relative;
+  padding: 2rem;
+  background-color: $background-color;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.container::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  background-image: url(https://www.ssuet.edu.pk/wp-content/uploads/About-The-University.jpg);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: rgba(59, 59, 59, 0.4);
+  background-blend-mode: color;
+  background-size: 100%;
+}
+.register {
+  color: white;
+  font-weight: 300;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.header {
+  color: $primary-color;
+  //   width: 100%;
+  font-weight: 500;
+  font-size: 5rem;
+  color: #ffffff !important;
+  line-height: 0.8em;
+  background-image: linear-gradient(
+    180deg,
+    rgba(102, 45, 145, 0.9) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: 3px 3px 3px 3px;
+  overflow: hidden;
+  padding-top: 2% !important;
+  padding-right: 5% !important;
+  padding-bottom: 2% !important;
+  padding-left: 5% !important;
+  margin-bottom: 3% !important;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+}
+
+.input,
+.select {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: $border-radius;
+  background-color: $input-background;
+}
+
+.button {
+  padding: 1rem;
+  border: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: $button-color;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $button-hover-color;
+  }
+}

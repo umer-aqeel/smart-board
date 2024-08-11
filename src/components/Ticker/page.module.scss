@@ -1,0 +1,24 @@
+@import "/src/styles/global/variables.scss";
+
+.tickerWrapper{
+    position: relative;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: $green;
+    position: relative;
+    z-index: 9;
+    .title{
+        padding: 1rem;
+        background: $purple;
+        h2{
+            color: $white;
+        }
+    }
+    .announcement{
+        position: relative;
+        height: 100%;
+        color: $white;
+    }
+}

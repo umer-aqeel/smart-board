@@ -1,0 +1,26 @@
+@import "/src/styles/global/variables.scss";
+
+.sliderWraper{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.5rem;
+    .imgWraper{
+        width: 20%;
+    }
+    .dateTime{
+        text-align: right;
+    }
+}
+
+.sliderWraper::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px; 
+    background-color: #662D91; 
+    position: absolute;
+    bottom: -1rem;    
+    left: 0;
+}

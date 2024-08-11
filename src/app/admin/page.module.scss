@@ -1,0 +1,132 @@
+.adminContainer {
+  padding: 20px;
+  max-width: 100%;
+  margin: 0 auto;
+
+  .header {
+    // font-size: 24px;
+    // margin-bottom: 20px;
+    width: 100%;
+    font-weight: 300;
+    font-size: 3em;
+    color: #ffffff !important;
+    line-height: 0.8em;
+    background-image: linear-gradient(
+      90deg,
+      rgba(102, 45, 145, 0.9) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    border-radius: 3px 3px 3px 3px;
+    overflow: hidden;
+    padding-top: 2% !important;
+    padding-right: 2% !important;
+    padding-bottom: 2% !important;
+    padding-left: 2% !important;
+    margin-bottom: 3% !important;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    // gap: ;
+  }
+  .button {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #34b04a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 2rem;
+    &:hover {
+      background-color: darken(#34b04a, 10%);
+    }   
+  }
+  .logoutButton {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #662d91;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    &:hover {
+      background-color: darken(#662d91, 10%);
+    }
+  }
+
+  .userList {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .userItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+  }
+
+  .editButton,
+  .deleteButton {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .editButton {
+    background-color: #34b04a;
+    color: white;
+    &:hover {
+      background-color: darken(#34b04a, 10%);
+    }
+  }
+
+  .deleteButton {
+    background-color: #ff4d4d;
+    color: white;
+    &:hover {
+      background-color: darken(#ff4d4d, 10%);
+    }
+  }
+
+  .editUserContainer {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .formGroup {
+    margin-bottom: 15px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  input,
+  select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  .saveButton {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+}

@@ -1,0 +1,88 @@
+.editUserContainer {
+    padding: 20px;
+    max-width: 50%;
+    margin: 0 auto;
+  
+    .header {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  
+    .logoutButton {
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  
+    .userList {
+      list-style-type: none;
+      padding: 0;
+    }
+  
+    .userItem {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: #f2f2f2;
+      border-radius: 5px;
+    }
+  
+    .editButton,
+    .deleteButton {
+      padding: 5px 10px;
+      margin-left: 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  
+    .editButton {
+      background-color: #007bff;
+      color: white;
+    }
+  
+    .deleteButton {
+      background-color: #ff4d4d;
+      color: white;
+    }
+  
+    .editUserContainer {
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  
+    .formGroup {
+      margin-bottom: 15px;
+    }
+  
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+  
+    input,
+    select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+  
+    .saveButton {
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  }
+  

@@ -1,0 +1,129 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  .createNewsLink {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: #34b04a;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1em;
+
+    &:hover {
+      background-color: #208332;
+    }
+  }
+
+  .title {
+    width: 100%;
+    font-weight: 300;
+    font-size: 3em;
+    color: #ffffff !important;
+    line-height: 0.8em;
+    background-image: linear-gradient(
+      90deg,
+      rgba(102, 45, 145, 0.9) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    border-radius: 3px 3px 3px 3px;
+    overflow: hidden;
+    padding-top: 2% !important;
+    padding-right: 2% !important;
+    padding-bottom: 2% !important;
+    padding-left: 2% !important;
+    margin-bottom: 3% !important;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 100%;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #0070f3;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #005bb5;
+      }
+    }
+  }
+
+  .announcementList {
+    list-style: none;
+    padding: 0;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+
+      a {
+        font-weight: bold;
+        color: #0070f3;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .button {
+        background-color: #ff4d4d;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-left: 1rem;
+
+        &:hover {
+          background-color: #e03c3c;
+        }
+      }
+    }
+  }
+
+  .announcementDetail {
+    p {
+      margin-top: 15px;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #005bb5;
+    }
+  }
+}
