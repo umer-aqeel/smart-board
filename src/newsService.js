@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/news";
+const API_URL = "https://smart-board-backend.vercel.app/news";
 
 // Helper function to get the authorization headers
 const getAuthHeaders = () => {
