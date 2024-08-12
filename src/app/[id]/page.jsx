@@ -37,7 +37,7 @@ export default function EditUser() {
         const userInfo = JSON.parse(localStorage.getItem('userInfo'));
 
         try {
-            await axios.put(`http://localhost:5000/users/${id}`, user, {
+            await axios.put(`https://smart-board-backend.vercel.app/users/${id}`, user, {
                 headers: { Authorization: `Bearer ${userInfo.token}` },
             });
             alert('User updated successfully');

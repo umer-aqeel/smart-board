@@ -37,7 +37,7 @@ export default function Admin() {
     const userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
     try {
-      await axios.delete(`http://localhost:5000/users/${id}`, {
+      await axios.delete(`https://smart-board-backend.vercel.app/users/${id}`, {
         headers: { Authorization: `Bearer ${userInfo.token}` },
       });
       setUsers(users.filter((user) => user._id !== id));
