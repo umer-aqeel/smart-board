@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { getNewsById } from "@/newsService";
 import styles from "./page.module.scss";
 import { useRouter } from "next/navigation";
+import { Puff } from "react-loader-spinner";
 
 export default function NewsDetail() {
   const { id } = useParams();
@@ -28,7 +29,23 @@ export default function NewsDetail() {
     fetchUser()
   }, [id]);
 
-  if (!news) return <div>Loading...</div>;
+  if (!news) {
+    return (
+      <>
+      <div className={styles.loaderContainer} >
+      <Puff
+  visible={true}
+  height="150"
+  width="150"
+  color="#662d91"
+  ariaLabel="puff-loading"
+  wrapperStyle={{}}
+  wrapperClass=""
+  />
+      </div>
+      </>
+    )
+  }
 
   return (
     <div className={styles.newsDetailContainer}>

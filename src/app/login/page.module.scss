@@ -19,11 +19,30 @@ $border-radius: 5px;
   z-index: 1;
 }
 
+
+.authcard {
+background: rgba(255, 255, 255, 0.11);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8.1px);
+-webkit-backdrop-filter: blur(8.1px);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 50%;
+gap: 10px;
+padding: 20px 0px;
+}
+
+
+
+
 .container::after {
   content: "";
   z-index: -1;
   position: absolute;
-  background-image: url(https://www.ssuet.edu.pk/wp-content/uploads/About-The-University.jpg);
+  background: linear-gradient(rgba(255,255,255, 0.5), rgba(255,255,255, 0.5)), url('../../../public/img/cover.jpeg');
   top: 0;
   bottom: 0;
   left: 0;
@@ -45,21 +64,17 @@ $border-radius: 5px;
   color: $primary-color;
   //   width: 100%;
   font-weight: 500;
-  font-size: 5rem;
+  font-size: 3rem;
   color: #ffffff !important;
   line-height: 0.8em;
-  background-image: linear-gradient(
-    180deg,
-    rgba(102, 45, 145, 0.9) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
+ margin: 10px 0px;
   border-radius: 3px 3px 3px 3px;
   overflow: hidden;
-  padding-top: 2% !important;
-  padding-right: 5% !important;
-  padding-bottom: 2% !important;
-  padding-left: 5% !important;
-  margin-bottom: 3% !important;
+  padding-bottom: 10px;
+  // padding-top: 2% !important;
+  // padding-right: 5% !important;
+  // padding-bottom: 2% !important;
+  // padding-left: 5% !important;
 }
 
 .form {

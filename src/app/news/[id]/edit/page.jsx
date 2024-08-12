@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { getNewsById, updateNews } from "@/newsService";
 import { useRouter } from "next/navigation";
 import styles from "./page.module.scss";
+import { Puff } from "react-loader-spinner";
 
 export default function EditNews() {
   const { id } = useParams();
@@ -37,7 +38,23 @@ export default function EditNews() {
     router.push(`/news/${id}`);
   };
 
-  if (!news) return <div>Loading...</div>;
+  if (!news) {
+    return (
+      <>
+      <div className={styles.loaderContainer} >
+      <Puff
+  visible={true}
+  height="150"
+  width="150"
+  color="#662d91"
+  ariaLabel="puff-loading"
+  wrapperStyle={{}}
+  wrapperClass=""
+  />
+      </div>
+      </>
+    )
+  }
 
   return (
     <div className={styles.container}>
