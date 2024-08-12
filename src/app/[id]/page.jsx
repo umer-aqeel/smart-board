@@ -19,7 +19,7 @@ export default function EditUser() {
             }
 
             try {
-                const { data } = await axios.get(`http://localhost:5000/users/${id}`, {
+                const { data } = await axios.get(`https://smart-board-backend.vercel.app/users/${id}`, {
                     headers: { Authorization: `Bearer ${userInfo.token}` },
                 });
                 setUser(data);

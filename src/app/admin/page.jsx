@@ -18,7 +18,7 @@ export default function Admin() {
         return;
       }
       try {
-        const { data } = await axios.get("http://localhost:5000/users", {
+        const { data } = await axios.get("https://smart-board-backend.vercel.app/users", {
           headers: { Authorization: `Bearer ${userInfo.token}` },
         });
         setUsers(data);
