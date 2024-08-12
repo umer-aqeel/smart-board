@@ -13,7 +13,7 @@ export default function Register() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.post('http://localhost:5000/users/register', { username, password, role });
+            const { data } = await axios.post('https://smart-board-backend.vercel.app/users/register', { username, password, role });
             // console.log(data.token);
             localStorage.setItem('userInfo', JSON.stringify(data));
             alert('Registration successful');

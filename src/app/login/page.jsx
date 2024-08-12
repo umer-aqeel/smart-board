@@ -12,7 +12,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("https://smart-board-backend.vercel.app/login", {
+      const { data } = await axios.post("https://smart-board-backend.vercel.app/users/login", {
         username,
         password,
       });
