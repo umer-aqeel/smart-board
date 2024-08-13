@@ -32,7 +32,7 @@ export default function CreateNews() {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className={styles.formGroup}>
           <label>Title</label>
-          <input {...register("title", { required: true })} />
+          <input style={{width: '100%' , padding: '10px' , border: '1px solid #ddd' }} {...register("title", { required: true })} />
           {errors.title && <p className={styles.error}>Title is required</p>}
         </div>
         <div className={styles.formGroup}>

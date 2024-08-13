@@ -4,9 +4,16 @@ import { getAllNews, deleteNews } from "@/newsService";
 import Link from "next/link";
 import styles from "./page.module.scss";
 import { useRouter } from "next/navigation";
+import { MdEdit } from "react-icons/md";
+import { FaRegTrashAlt } from "react-icons/fa";
+import { TailSpin } from "react-loader-spinner";
+
+
 export default function Home() {
   const [news, setNews] = useState([]);
   const router = useRouter();
+  const [isLoading , setIsLoading] = useState(false)
+
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -17,8 +24,11 @@ export default function Home() {
         return;
       }
       const fetchNews = async () => {
+        setIsLoading(true)
         const newsList = await getAllNews();
         setNews(newsList);
+        setIsLoading(false)
+
       };
       fetchNews();
     };
@@ -36,22 +46,35 @@ export default function Home() {
       <Link href="news/create" className={styles.createNewsLink}>
         Create News
       </Link>
-      <ul className={styles.newsList}>
+
+      {
+        isLoading ? (
+<div className={styles.loaderContainer} >
+          <TailSpin color="#662d91" width={30} height={30} />
+          <h3 style={{textAlign: 'center'}} >Loading News ....... </h3>
+        </div>
+        ) : (
+          <>
+           <ul className={styles.newsList}>
         {news.map((item) => (
           <li key={item._id}>
             <Link href={`/news/${item._id}`}>{item.title}</Link>
-            <span>
+            <span style={{display: 'flex' , alignItems: 'center'}} >
               <button
                 className={styles.editButton}
                 onClick={() => router.push(`news/${item._id}/edit`)}
               >
-                Edit
+                <MdEdit size={20} />
               </button>
-              <button className={styles.button} onClick={() => handleDelete(item._id)}>Delete</button>
+              <button className={styles.button} onClick={() => handleDelete(item._id)}><FaRegTrashAlt size={20} /></button>
             </span>
           </li>
         ))}
       </ul>
+          </>
+        )
+      }
+     
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import styles from "./page.module.scss";
+import { Puff } from "react-loader-spinner";
 
 export default function Admin() {
   const [users, setUsers] = useState([]);
@@ -49,18 +50,32 @@ export default function Admin() {
   };
 
   const handleLogout = () => {
-    localStorage.removeItem("userInfo"); 
+    localStorage.removeItem("userInfo");
     router.push("/login");
   };
   const handleNews = () => {
-    router.push("/news"); 
+    router.push("/news");
   };
   const handleAnnouncements = () => {
-    router.push("/announcements"); 
+    router.push("/announcements");
   };
 
   if (loading) {
-    return <p className={styles.loading}>Loading...</p>;
+    return (
+      <>
+      <div className={styles.loaderContainer} >
+      <Puff
+  visible={true}
+  height="150"
+  width="150"
+  color="#662d91"
+  ariaLabel="puff-loading"
+  wrapperStyle={{}}
+  wrapperClass=""
+  />
+      </div>
+      </>
+    )
   }
 
   return (
