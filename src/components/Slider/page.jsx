@@ -17,7 +17,7 @@ export default function Slider() {
 
     fetchNews(); // Initial fetch
 
-    const intervalId = setInterval(fetchNews, 600000); // Fetch news every 6 min
+    const intervalId = setInterval(fetchNews, 200000); // Fetch news every 6 min
 
     return () => clearInterval(intervalId); 
   }, []);
